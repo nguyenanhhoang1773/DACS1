@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
 }
 
 header > #first-header,
@@ -101,6 +101,10 @@ header #second-header a {
 
 main {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .list-albumn {

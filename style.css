@@ -106,13 +106,10 @@ main {
 }
 
 .list-albumn {
-  position: absolute;
   background-color: white;
   width: 900px;
   height: 259px;
   margin-bottom: 10px;
-  top: 40px;
-  left: 110px;
 }
 
 .list-albumn > .frame-select {

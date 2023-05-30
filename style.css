@@ -2,23 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: #fff;
-  width: 1500px;
+  background-color: #000;
 }
 
-header {
-  width: 100vw;
-}
 
+
+header > #first-header {
+  background-color: #000;
+}
 header > #first-header,
 #second-header {
-  background-color: #fff;
-  height: 65px;
-  padding: 12px 0;
   display: flex;
+  justify-content: center;
   position: relative;
   border-bottom: 1.5px solid #000;
 }
@@ -30,7 +29,8 @@ header > #second-header {
 
 header > #first-header > #image-header {
   display: flex;
-  max-width: 20%;
+  margin-left: 60px;
+  width: 20%;
 }
 
 header img {
@@ -38,60 +38,74 @@ header img {
 }
 
 header > #first-header > #title {
+  color: #fff;
+  padding: 3px 50px;
   display: flex;
   text-transform: uppercase;
-  max-width: 80%;
-  width: 70%;
+  width: 100%;
   align-items: center;
-  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
-  font-weight: 900;
-  margin-right: 20px;
+  font-weight: 400;
 }
 
 header > #first-header > #button-header {
+  width: 20%;
   display: flex;
-  max-width: 20%;
   justify-content: end;
   align-items: center;
+  margin-right: 60px;
 }
 
 header #button-header > button {
   text-transform: uppercase;
-  padding: 15px;
+  padding: 12px 14px;
   margin: 4px 8px;
   font-weight: bold;
   letter-spacing: 1.5px;
 }
 
 header #button-header > button:first-of-type {
+  border-radius: 6px;
+  border: none;
   background-color: #fff;
   color: #000;
-  border: 2px solid #000;
+  border: 2px solid rgba(0,0,0,0.8);
 }
 
 header #button-header > button:last-of-type {
-  background-color: rgb(26, 72, 196);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color:rgba(0,0,0,0.8) ;
   color: rgb(255, 255, 255);
 }
 
+header #button-header > button:first-of-type:hover,button:last-of-type:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 header #second-header ul {
   display: flex;
   list-style-type: none;
-  width: 100%;
+  /* width: 100%; */
   justify-content: center;
 }
 
 header #second-header ul > li {
-  margin: auto 20px;
+  font-weight: 600;
+  padding: 16px 10px;
   display: flex;
   align-items: center;
 }
-
+header #second-header ul > li:hover >a  {
+  color: #fff;
+}
+header #second-header ul > li:hover  {
+  cursor: pointer;
+}
 header #second-header a {
   text-transform: uppercase;
-  color: #fff;
+  color:rgb(197, 196, 196) ;
   text-decoration: none;
   margin: auto 15px;
   font-size: 1.2rem;
@@ -100,36 +114,42 @@ header #second-header a {
 }
 
 main {
+
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 20px  ;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
+.wrapper--main {
+  overflow: auto;
+  max-height: 800px;
+  padding: 0 14px 0 4px;
+}
 .list-albumn {
-  background-color: white;
-  width: 900px;
-  height: 259px;
+  background-color: #121212;
   margin-bottom: 10px;
 }
 
 .list-albumn > .frame-select {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .list-albumn .title-box {
-  width: 100%;
-  height: 46px;
-  background-color: #fff;
+  margin-bottom: 6px;
+  background-color: #121212;
 }
 
 .list-albumn a {
-  display: block;
+  
+  display: inline-block;
   text-decoration: none;
-  color: #2daaed;
+  color: #fff;
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 25px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -137,27 +157,22 @@ main {
 
 .list-albumn ul {
   width: 100%;
-  height: 194px;
   list-style-type: none;
 }
 
 .list-albumn ul > li {
   display: inline-block;
-  padding: 0px;
+  width: 260px  ;
   margin: 0 20px 10px 0;
-  padding-top: 10px;
-  width: 152px;
-  height: auto;
+  padding: 20px 10px;
+  border-radius: 14px;
 }
 
-.list-albumn ul a {
-  width: 154px;
-  height: 154px;
-}
 
 .list-albumn a > img {
   width: 100%;
-  height: 150px;
+  height: 260px ;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -168,9 +183,11 @@ ul > li > .info-albumn {
 }
 
 .info-albumn h3 {
+  margin-left: 6px;
   font-family: "NhacCuaTui", sans-serif;
-  font-weight: 100;
-  font-size: 14px;
-  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  color: #fff;
   text-transform: capitalize;
 }

@@ -1,0 +1,245 @@
+
+
+.container  {
+    display: flex;
+}
+
+.sideBar {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.575);
+    min-width: 400px;
+    /* min-height: 1000px; */
+    background: #000;
+}
+.sideBar__Items {
+    border-radius: 8px;
+    background-color: #121212;
+}
+.sideBar__Items + .sideBar__Items {
+    margin-top: 10px;
+}
+.sideBar__Items__Item {
+    padding:16px 20px;
+}
+.sideBar__Items__Item:hover {
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+    color: #fff;
+    
+}
+.Item__icon {
+    font-size: 20px;
+}
+.Item__title {
+    margin-left: 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.sideBar__Items__library {
+   
+    padding:14px 10px;
+}
+.Items__library__header{
+    padding:0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.library__header--left:hover,.library__header--right:hover {
+    color: #fff;
+    cursor: pointer;
+}
+.library__header--right {
+    font-size: 20px;
+    padding: 2px 2px;
+}
+.library__header--right + .library__header--right {
+    margin-left: 6px;
+}
+.library__btn--wrapper {
+    padding:0 10px;
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+.library__btn {
+    font-size: 14px;
+    color: #fff;
+    padding: 8px 12px; 
+    border: none;
+    border-radius: 20px;
+    background: #2c2a2a;
+}
+.library__btn + .library__btn {
+    margin-left: 4px;
+}
+.library__items {
+    max-height: 67.5vh;
+    overflow: auto;
+}
+.library__items::-webkit-scrollbar {
+    display: none;
+}
+.library__item {
+    border-radius: 4px;
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+}
+.library__item:hover {
+    background: rgb(26, 25, 25);
+    cursor: pointer;
+}
+.library__item__img {
+    border-radius: 4px;
+    width: 46px;
+    height: 46px;
+}
+.library__item__infor {
+    margin-left: 10px;
+}
+.library__item__title {
+    color: #fff;
+    margin-bottom: 4px;
+}
+.library__item__describe {
+    font-size: 14px;
+}
+
+
+
+.nowPlaying {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 14px 20px;
+    background-color: #000;
+    justify-content: space-between;
+    align-items: center;
+}
+.nowPlaying__infor {
+    display: flex;
+    align-items: center;
+}
+.nowPlaying__infor__img {
+    border-radius: 4px;
+}
+.nowPlaying__infor--describe {
+    margin-left: 14px;
+}
+.nowPlaying__infor__title {
+    color: #fff;
+    margin-bottom: 6px;
+}
+.nowPlaying__infor__singer {
+    font-size: 14px;
+    color: #817a7a;
+}
+.nowPlaying__infor__icon {
+    margin-left: 20px;
+    color: #fff;
+}
+
+
+
+
+.nowPlaying__control {
+    display: flex;
+    flex: 1;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
+
+.nowPlaying__control__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nowPlaying__control__icon {
+    padding: 6px;
+    color: rgb(196, 191, 191);
+    font-size: 20px;
+}
+.nowPlaying__control__icon + .nowPlaying__control__icon {
+    margin-left: 8px;
+}
+.nowPlaying__control__icon:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.nowPlaying__control__icon.nowPlaying__control__icon--bigger  {
+    font-size: 30px;
+    color: #fff;
+}
+
+
+.nowPlaying__control__bar {
+    display: flex;
+    flex: 1;
+    width: 60%;
+    max-width: 65   0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+.control__bar__timeRun {
+    margin-right: 8px;
+    color: #929292;
+    font-size: 12px;
+}
+.control__bar {
+    position: relative;
+    height: 4px;
+    border-radius: 50px;
+    background: #5c5b5b;
+    min-width: 200px;
+    flex: 1;
+}
+.control__bar--running {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 70%;
+    border-radius: 50px;
+}
+.control__bar__duration {
+    color: #929292;
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+
+.nowPlaying__adjust  {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.nowPlaying__adjust__icon {
+    fill: #fff;
+    width: 29px;
+    height:29px ;
+    padding: 6px;
+}
+.nowPlaying__adjust__soundBar {
+    position: relative;
+    margin-right: 4px;
+    width: 90px;
+    height: 4px;
+    border-radius: 50px;
+    background-color:#5c5b5b ;
+}
+.nowPlaying__adjust__soundBar--have {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    border-radius: 50px;
+    background-color: #fff;
+
+}

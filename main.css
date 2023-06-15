@@ -1,5 +1,56 @@
 
-
+:root {
+    --primay-color:#105ebf
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+}
+*::-webkit-scrollbar-track {
+    background-color: black;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.loading.hidden { 
+    transform: translateY(-100%);
+    opacity: 0.5;
+    transition: all ease 1s;
+    /* display: none; */
+}
+.loading {
+    z-index: 99;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.loading__title {
+    color: #fff;
+    margin-left: 24px;
+    letter-spacing: 10px;
+    font-size: 60px;
+}
+.loading__icon {
+    width: 80px;
+    color: #fff;
+    font-size: 80px;
+    animation: spinner 2s linear infinite;
+}
+@keyframes spinner{
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 .container  {
     display: flex;
 }
@@ -7,8 +58,6 @@
 .sideBar {
     padding: 10px;
     color: rgba(255, 255, 255, 0.575);
-    min-width: 400px;
-    /* min-height: 1000px; */
     background: #000;
 }
 .sideBar__Items {
@@ -19,7 +68,7 @@
     margin-top: 10px;
 }
 .sideBar__Items__Item {
-    padding:16px 20px;
+    padding:12px 20px;
 }
 .sideBar__Items__Item:hover {
     background-color: rgba(0,0,0,0.1);
@@ -68,6 +117,11 @@
     border-radius: 20px;
     background: #2c2a2a;
 }
+.library__btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .library__btn + .library__btn {
     margin-left: 4px;
 }
@@ -107,12 +161,14 @@
 
 
 .nowPlaying {
+    z-index: 1;
     display: flex;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     padding: 14px 20px;
+    max-height: 94px;
     background-color: #000;
     justify-content: space-between;
     align-items: center;
@@ -122,6 +178,7 @@
     align-items: center;
 }
 .nowPlaying__infor__img {
+    width: 60px;
     border-radius: 4px;
 }
 .nowPlaying__infor--describe {
@@ -129,6 +186,9 @@
 }
 .nowPlaying__infor__title {
     color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
     margin-bottom: 6px;
 }
 .nowPlaying__infor__singer {
@@ -168,27 +228,36 @@
     color: #fff;
     cursor: pointer;
 }
-.nowPlaying__control__icon.nowPlaying__control__icon--bigger  {
+.nowPlaying__control__icon--bigger  {
     font-size: 30px;
     color: #fff;
+    display: none;
 }
-
-
+.nowPlaying__control__icon--bigger.active {
+    display: block;
+}
+/* .pauseBtn {
+    display: none;
+}
+.pauseBtn.active {
+    display: block;
+} */
 .nowPlaying__control__bar {
     display: flex;
     flex: 1;
     width: 60%;
-    max-width: 65   0px;
+    max-width: 650px;
     justify-content: center;
     align-items: center;
     margin-top: 8px;
+    padding-bottom: 2px;
 }
 .control__bar__timeRun {
-    margin-right: 8px;
     color: #929292;
     font-size: 12px;
 }
 .control__bar {
+    margin: 0 18px;
     position: relative;
     height: 4px;
     border-radius: 50px;
@@ -196,18 +265,33 @@
     min-width: 200px;
     flex: 1;
 }
+.control__bar:hover .control__circle{ 
+    display: block;
+}
 .control__bar--running {
     background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 70%;
     border-radius: 50px;
+}
+.control__circle { 
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+    top: 50%;
+}
+.control__bar:hover {
+    cursor: pointer;
 }
 .control__bar__duration {
     color: #929292;
-    margin-left: 8px;
     font-size: 12px;
 }
 
@@ -242,4 +326,62 @@
     border-radius: 50px;
     background-color: #fff;
 
+}
+
+@media (min-width:1600px) {
+    .songItem  {
+        width: 20%;
+}
+    
+    .titleSongs  {
+        font-size: 25px;
+    }
+}
+
+@media (min-width:1300px) and (max-width:1600px)   {
+    .songItem  {
+        width: 25%;
+}
+    
+    .titleSongs  {
+        font-size: 22px;
+    }
+}
+@media (min-width:1000px) and (max-width:1300px)   {
+    .songItem  {
+        width: 33.33%;
+}
+    
+    .titleSongs  {
+        font-size: 22px;
+    }
+}
+
+@media (max-width:1000px) {
+    .songItem  {
+        width: 50%;
+}   
+.nowPlaying__infor__title {
+    width: 70px;
+    
+}
+    .titleSongs  {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:1200px) {
+    .sideBar {
+        min-width: 300px ;
+    }
+   
+    .library__btn:last-child {
+        display: none;
+    }
+}
+
+@media (min-width:1200px) { 
+    .sideBar {
+        min-width: 400px ;
+    }
 }

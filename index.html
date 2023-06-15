@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
+    <div class="loading">
+      <i class="loading__icon fa-solid fa-spinner"></i>
+      <h2 class="loading__title">VOCAL</h2>
+    </div>
     <div class="container">
       <div class="nowPlaying">
         <div class="nowPlaying__infor">
@@ -33,21 +37,27 @@
           <i class="nowPlaying__infor__icon fa-regular fa-heart"></i>
         </div>
         <div class="nowPlaying__control">
+          <audio class="audio" src="assets/song2.mp3"></audio>
           <div class="nowPlaying__control__btn">
             <i class="nowPlaying__control__icon fa-solid fa-shuffle"></i>
             <i class="nowPlaying__control__icon fa-solid fa-backward-step"></i>
             <i
-              class="nowPlaying__control__icon nowPlaying__control__icon--bigger fa-solid fa-circle-play"
+              class="nowPlaying__control__icon active playBtn nowPlaying__control__icon--bigger fa-solid fa-circle-play"
+            ></i>
+            <i
+              class="nowPlaying__control__icon pauseBtn nowPlaying__control__icon--bigger fa-solid fa-circle-pause"
             ></i>
             <i class="nowPlaying__control__icon fa-solid fa-forward-step"></i>
             <i class="nowPlaying__control__icon fa-solid fa-repeat"></i>
           </div>
           <div class="nowPlaying__control__bar">
-            <span class="control__bar__timeRun">0:32</span>
+            <span class="control__bar__timeRun">0:00</span>
             <div class="control__bar">
-              <div class="control__bar--running"></div>
+              <div class="control__bar--running">
+                <div class="control__circle"></div>
+              </div>
             </div>
-            <span class="control__bar__duration">3:56</span>
+            <span class="control__bar__duration">3:41</span>
           </div>
         </div>
         <div class="nowPlaying__adjust">
@@ -156,108 +166,7 @@
             <button class="library__btn">Artists</button>
             <button class="library__btn">Podcasts & Shows</button>
           </div>
-          <div class="library__items">
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-            <div class="library__item">
-              <img
-                class="library__item__img"
-                src="https://i.scdn.co/image/ab67616d000011eb2461003df8139247949c8a9d"
-              />
-              <div class="library__item__infor">
-                <h3 class="library__item__title">Vchill</h3>
-                <p class="library__item__describe">Playlist</p>
-              </div>
-            </div>
-          </div>
+          <div class="library__items"></div>
         </div>
       </div>
       <div>
@@ -272,7 +181,7 @@
             </div>
             <!--Button-->
             <div id="button-header">
-              <button type="button">Login</button>
+              <button class="loginBtn" type="button">Login</button>
               <button type="button">Subscribe</button>
             </div>
           </div>
@@ -294,57 +203,14 @@
             <div class="list-albumn">
               <div class="frame-select">
                 <div class="box-left">
-                  <div class="title-box">
+                  <div ipx="1" class="title-box">
                     <h2>
-                      <a href="" id="title">giai điệu gây nghiện</a>
+                      <a class="titleSongs" href="" id="title"
+                        >giai điệu gây nghiện</a
+                      >
                     </h2>
                   </div>
-                  <ul>
-                    <li>
-                      <a href=""
-                        ><img src="./image/First Line/First.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>K-POP Gen 3</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/First Line/Second.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>Mùa Thu Năm Ấy</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/First Line/Third.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>Đỉnh cao Collab ngày nay</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/First Line/Fourth.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>Những bài hát giúp tập trung làm việc</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/First Line/Fifth.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>Acoustic Việt ngày ấy</h3>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul class="musicItems"></ul>
                 </div>
                 <div class="right-left"></div>
               </div>
@@ -356,58 +222,12 @@
                 <div class="box-left">
                   <div class="title-box">
                     <h2>
-                      <a href="" id="title">top thịnh hành</a>
+                      <a class="titleSongs" href="" id="title"
+                        >top thịnh hành</a
+                      >
                     </h2>
                   </div>
-                  <ul>
-                    <li>
-                      <a href=""
-                        ><img src="image/Second Line/First.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>Nhạc Phim Hàn Quốc</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Second Line/Second.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>
-                          Remixes 2023 - Best Popular Songs Remixed - Best
-                          Remixes & EDM Hits 2023
-                        </h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Second Line/Third.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>rap việt gây nghiện</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Second Line/Fouth.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>v-pop combo hit</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Second Line/Fifth.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>những bài hát không thể bỏ qua</h3>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul class="musicItems--popular"></ul>
                 </div>
                 <div class="right-left"></div>
               </div>
@@ -419,55 +239,12 @@
                 <div class="box-left">
                   <div class="title-box">
                     <h2>
-                      <a href="" id="title">hot trong tháng</a>
+                      <a class="titleSongs" href="" id="title"
+                        >hot trong tháng</a
+                      >
                     </h2>
                   </div>
-                  <ul>
-                    <li>
-                      <a href=""
-                        ><img src="./image/Third Line/First.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>k-pop rising</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Third Line/Second.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>mùa hè sôi động</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Third Line/Third.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>nhạc phim âu mỹ</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Third Line/Fouth.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>các bản hit quốc tế</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Third Line/Fifth.png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>nhạc việt không thể bỏ qua</h3>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul class="musicItem--hot"></ul>
                 </div>
                 <div class="right-left"></div>
               </div>
@@ -479,100 +256,10 @@
                 <div class="box-left">
                   <div class="title-box">
                     <h2>
-                      <a href="" id="title">mới phát hành</a>
+                      <a class="titleSongs" href="" id="title">mới phát hành</a>
                     </h2>
                   </div>
-                  <ul>
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (1).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>FAST X (Original Motion Picture Soundtrack)</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (2).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>the moi rap 2023</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (3).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>TUNG(RAP)</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (4).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>cô ấy của anh ấy</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (5).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>nấu cho em ăn</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (6).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>môi chạm môi</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (7).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>hồi kết</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (8).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>space jam</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (9).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>từ lúc em đến</h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a href=""
-                        ><img src="./image/Fouth Line/Image (10).png" alt=""
-                      /></a>
-                      <div class="info-albumn">
-                        <h3>hộ tâm (OST)</h3>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul class="musicItem--new"></ul>
                 </div>
                 <div class="right-left"></div>
               </div>
@@ -581,5 +268,6 @@
         </div>
       </div>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
